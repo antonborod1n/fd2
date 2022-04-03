@@ -57,3 +57,9 @@ img {
   body{
       min-height: 100vh;
   }
+
+  .title {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+  }
