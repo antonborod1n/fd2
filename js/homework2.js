@@ -20,6 +20,7 @@ console.log(convertElements(["pdf", 123, "def", 456]));
 console.log(convertElements([1, 2, 3, 17, 24, 3, "a", "123b"]));
 console.log(convertElements([]));
 
+
 /* 2. Создайте функцию, которая возвращает количество " true” значений в массиве.
  numericTrue([true, false, false, true, false]) ➞ 2
  numericTrue ([false, false, false, false]) ➞ 0
@@ -40,6 +41,7 @@ function numericTrue(arr) {
 console.log(numericTrue([true, false, false, true, false]));
 console.log(numericTrue ([false, false, false, false]));
 console.log(numericTrue ([]));
+
 
 /* 3. Вернуть наибольшее и наименьшее числа
 Создайте функцию, которая принимает массив чисел, и возвращает наибольшее и наименьшее число.

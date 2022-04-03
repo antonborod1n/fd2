@@ -1,3 +1,5 @@
+'use strict'; /*- объявляем что будем работать в новом режиме */
+
 /* 1.	Напишите функцию, которая возвращает сумму элементов больше 5 в данном массиве.
 sumFive([1, 5, 20, 30, 4, 9, 18]) ➞ 77
 sumFive([1, 2, 3, 4]) ➞ 0
@@ -13,7 +15,7 @@ function sumFive(arr) {
             sum += arr[i];
         }
     } 
-    console.log(`Сумма массива ровна ${sum}`);
+    console.log(`Сумма ${sum}`);
 }
 
 sumFive([1, 5, 20, 30, 4, 9, 18]);
@@ -89,7 +91,6 @@ function keysAndValues(obj) {
     console.log(keys);
     console.log(values);
 }
-
 
 keysAndValues({ a: 1, b: 2, c: 3 });
 keysAndValues({ a: "Apple", b: "Microsoft", c: "Google" });

@@ -2,7 +2,6 @@
 
 //ПЕРВАЯ ДОМАШНЯЯ РАБОТА
 
-/* 
 let userName,
     surname,
     patr,
@@ -32,5 +31,4 @@ let pens = (userYear > 65) ? 'да' : 'нет';
 
 alert(`Ваше ФИО: ${userName} ${surname} ${patr} \nВаш возраст в годах: ${userYear} \nВаш возраст в днях: ${userYear * 365} \nЧерез 5 лет вам будет: ${userYear + 5} \nВаш пол: ${gender} \nВы на пенсии: ${pens}`);
 
- */
 
