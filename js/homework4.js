@@ -43,7 +43,7 @@ removeLeadingTrailing("190.000");
 removeLeadingTrailing("00803");
 removeLeadingTrailing("07.1200");
 removeLeadingTrailing("90");
-removeLeadingTrailing("6.7000");
+removeLeadingTrailing("6.7000"); 
 removeLeadingTrailing("6.07000");
 removeLeadingTrailing("000427");
 removeLeadingTrailing("000930");
@@ -53,6 +53,3 @@ removeLeadingTrailing("0.0");
 removeLeadingTrailing("000");
 removeLeadingTrailing("000.000");
  
-
-
-
