@@ -635,8 +635,6 @@ console.log(numInStr(["this is a test", "test1"])); */
 
 //---REDUSE
 
-//сумму всех элементов в массиве, где каждый элемент умножается на его индекс
-
 /* function indexMulSum(arr) {
   var a = arr.reduce(function(sum, item, index, arr){ 
     sum = sum + (item * index);
@@ -645,9 +643,16 @@ console.log(numInStr(["this is a test", "test1"])); */
   console.log(a);
 }
 
-indexMulSum([1, 2, 3, 4, 5]);
-indexMulSum([-3, 0, 8, -6]); */
+//сумма элементов в массиве:        sum = sum + item
+//преобразовать в строку:           sum = sum + ' ' +item
+//сложить все четные:               if(item > 0) sum += item
+//элемент умножается на его индекс: sum = sum + (item * index)
+//найти самое большое значение:     if(item > sum) sum = item
+//return sum
 
+// из объекта достать данные и поместитть в массив.
+// вместо sum, пустой массив: sum.push(item.ключ массива)
+//return sum
 
 //---MAP-- новый массив трансформация
 
@@ -658,3 +663,12 @@ var b = arr.map(item => {
 });
 
 console.log(b); */
+
+let arr = [1, 8, 2, 3, 4, 5];
+
+function rev(arr) {
+  arr.reverse();
+  console.log(arr);
+}
+
+rev(arr);
