@@ -664,11 +664,11 @@ var b = arr.map(item => {
 
 console.log(b); */
 
-let arr = [1, 8, 2, 3, 4, 5];
+/* let arr = [1, 8, 2, 3, 4, 5];
 
 function rev(arr) {
   arr.reverse();
   console.log(arr);
 }
 
-rev(arr);
+rev(arr); */

@@ -7,57 +7,62 @@
 •	с использованием метода массива filter,
 •	с использованием метода массива reduce. */
 
-/* var a = prompt('Введите слово?'); */
-/* var userArr = a.toLowerCase().split('');  */
 
-/* function сheckLetter(userArr) {
-    var letterArr = ['а', 'у', 'о', 'и', 'э', 'ы'];
-    var count = 0;
+//-------------FOREACH
 
-    userArr.forEach(function (item, index) {
+var a = prompt('Введите слово?');
+var userArr = a.toLowerCase().split('');
 
-        if(userArr.item === letterArr) {
-            count++;
-        }
-    });
-    console.log(count);
-} */
-
-
-/* function сheckLetter(userArr) {
-    var letterArr = ['а', 'у', 'о', 'и', 'э', 'ы'];
-    var count = 0;
-
-    userArr.filter(function(el, index){
-
-
-    });
-} */
-
-/* function сheckLetter(a) {
+function сheckLetter(userArr) {
     var letter = 'аоиеёэыуюя';
     var count = 0;
-    [...a].forEach(function(item) {
+    userArr.forEach(function(item) {
         if (letter.includes(item))
             count++;
     });
     return count;
 }
- 
-console.log(сheckLetter(a)); */
 
+console.log(сheckLetter(userArr));
 
+//-------------FILTER
 
+function сheckLetter(userArr) {
+    var letter = 'аоиеёэыуюя';
+    var count = 0;
+
+    userArr.filter(function(item){
+        if (letter.includes(item))
+            count++;
+    });
+    return count;
+} 
+
+console.log(сheckLetter(userArr)); 
+
+//-------------REDUCE
+
+function сheckLetter(userArr) {
+    var letter = 'аоиеёэыуюя';
+
+    var b = userArr.reduce(function(sum, item){
+        if(letter.includes(item)) {
+            sum++;
+        }
+        return sum;
+    }, 0);
+    console.log(b);
+}
+
+сheckLetter(userArr);
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-/* 2.	У вас есть два массива. Один показывает имена людей, а другой показывает их род занятий. Ваша задача - 
+/*  2.	У вас есть два массива. Один показывает имена людей, а другой показывает их род занятий. Ваша задача -
 создать объект, отображающий каждого человека по его роду занятий.
 
-            var names = ["Max", "Vera", "Joe", "Annette", "Sussan"]
-            var jobs = ["Butcher", "Programmer", "Doctor", "Teacher", "Lecturer"]
+var names = ["Max", "Vera", "Joe", "Annette", "Sussan"]
+var jobs = ["Butcher", "Programmer", "Doctor", "Teacher", "Lecturer"]
 
 combineNameWork (names, jobs) ➞ {
 Max: "Butcher",
@@ -65,40 +70,39 @@ Vera: "Programmer",
 Joe: "Doctor",
 Annette: "Teacher",
 Sussan: "Lecturer"
-} */
+}  */
 
 //Два массива имеют одинаковую длину.
 //Индекс имени в массиве имен совпадает с индексом работы человека в массиве вакансий, как показано в таблице выше.
 
-/* function f() {
-    var names = ["Max", "Vera", "Joe", "Annette", "Sussan"];
-    var jobs = ["Butcher", "Programmer", "Doctor", "Teacher", "Lecturer"];  
-    var combineNameWork = {};
-    if(names.length !== jobs.length) {
-        return false;
-    } else {
-        return true;
-    }
-}
-console.log(f()); */
 
+var names = ["Max", "Vera", "Joe", "Annette", "Sussan"];
+var jobs = ["Butcher", "Programmer", "Doctor", "Teacher", "Lecturer"];
+let combineNameWork = {};
+
+for (let i = 0; i <= 4; i++) {
+	combineNameWork[names[i]] = jobs[i];
+}
+
+console.log(combineNameWork);
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 /* 3.	У вас есть входной массив (из строк с двумя буквами) и массив слов
-Напишите функцию, которая возвращает true, если каждую строку из первого массива можно найти хотя бы один раз в массиве слов
+Напишите функцию, которая возвращает true, если каждую строку из первого массива можно найти хотя бы один раз в массиве слов.
+
 canFind(["at", "be", "th", "au"], ["beautiful", "the", "hat"]) ➞ true
 canFind(["ay", "be", "ta", "cu"], ["maybe", "beta", "abet", "course"]) ➞ false
 # "cu" не найден ни в одном из слов.
 canFind(["th", "fo", "ma", "or"], ["the", "many", "for", "forest"]) ➞ true
 canFind(["oo", "mi", "ki", "la"], ["milk", "chocolate", "cooks"]) ➞ false */
- 
-/* function canFind(arr1, arr2) { 
-    var a = arr1.every(r => arr2.some(e => e.includes(r)));
-    return a; 
+
+function canFind(arr1, arr2) { 
+    var result = arr1.every(item => arr2.some(elem => elem.includes(item)));
+    return result; 
 } 
 
 console.log(canFind(["at", "be", "th", "au"], ["beautiful", "the", "hat"])); 
 console.log(canFind(["ay", "be", "ta", "cu"], ["maybe", "beta", "abet", "course"])); 
 console.log(canFind(["th", "fo", "ma", "or"], ["the", "many", "for", "forest"])); 
-console.log(canFind(["oo", "mi", "ki", "la"], ["milk", "chocolate", "cooks"])); */
+console.log(canFind(["oo", "mi", "ki", "la"], ["milk", "chocolate", "cooks"]));
