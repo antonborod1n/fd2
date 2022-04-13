@@ -184,14 +184,6 @@ console.log(tuckIn([[1, 2], [5, 6]], [[3, 4]])); */
 
  //------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-
-
- //4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
-
-
-
  //1. Напишите функцию, которая принимает строку и возвращает строку, в которой каждый символ повторяется один раз.
 // doubleElement("String") ➞ "SSttrriinngg"
 // doubleElement("Hello World!") ➞ "HHeelllloo  WWoorrlldd!!"
@@ -229,7 +221,6 @@ doubleElement("1234!_ ");
     
 }
 
-
 capToFront("hApPy");
 capToFront("moveMENT"); 
 capToFront("shOrtCAKE");
@@ -241,11 +232,6 @@ capToFront("shOrtCAKE");
 // doubleSwap( "aabbccc", "a", "b") ➞ "bbaaccc"
 // doubleSwap("random w#rds writt&n h&r&", "#", "&") ➞ "random w&rds writt#n h#r#"
 // doubleSwap("128 895 556 788 999", "8", "9") ➞ "129 985 556 799 888"
-
-
-
-
-
 
 
 //4. Напишите функцию, которая возвращает массив строк, отсортированных по длине в порядке возрастания.
@@ -286,8 +272,6 @@ sortByLength([]); */
   }
   */
   
-
-
 /* function highAndLow(numbers) {
     var a = numbers.split(' ');
     for(var i = 0; i < a.length; i++) {
@@ -643,14 +627,14 @@ console.log(numInStr(["this is a test", "test1"])); */
   console.log(a);
 }
 
-//сумма элементов в массиве:        sum = sum + item
+//сумма элементов в массиве:        return sum + item
 //преобразовать в строку:           sum = sum + ' ' +item
-//сложить все четные:               if(item > 0) sum += item
+//сложить все больше 0:             if(item > 0) sum += item
 //элемент умножается на его индекс: sum = sum + (item * index)
 //найти самое большое значение:     if(item > sum) sum = item
 //return sum
 
-// из объекта достать данные и поместитть в массив.
+// из объекта достать данные и поместить в массив.
 // вместо sum, пустой массив: sum.push(item.ключ массива)
 //return sum
 
