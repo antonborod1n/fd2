@@ -19,14 +19,15 @@ function reorderNums(arr, str) {
             });
         }
     });
+    console.log(arr);
 }
 
-console.log(reorderNums([515, 341, 98, 44, 211], "asc"));
-console.log(reorderNums([515, 341, 98, 44, 211], "desc"));
-console.log(reorderNums([63251, 78221], "asc"));
-console.log(reorderNums([63251, 78221], "desc"));
-console.log(reorderNums([1, 2, 3, 4], "asc"));
-console.log(reorderNums([1, 2, 3, 4], "desc"));
+reorderNums([515, 341, 98, 44, 211], "asc");
+reorderNums([515, 341, 98, 44, 211], "desc");
+reorderNums([63251, 78221], "asc");
+reorderNums([63251, 78221], "desc");
+reorderNums([1, 2, 3, 4], "asc");
+reorderNums([1, 2, 3, 4], "desc");
 
 
 /* 2.	Напишите функцию, которая принимает закодированную строку и возвращает объект в соответствии со следующим примером:
@@ -35,7 +36,7 @@ parseCode("michael0smith004331") ➞ {  firstName: "michael",  lastName: "smith"
 parseCode("Thomas00LEE0000043") ➞ {  firstName: "Thomas",  lastName: "LEE",  id: "43"} */
 
 
-/* function parseCode(str) {
+function parseCode(str) {
     var arr = str.split('0');
     var obj = {};
     arr = arr.filter(Boolean);
@@ -49,7 +50,7 @@ parseCode("Thomas00LEE0000043") ➞ {  firstName: "Thomas",  lastName: "LEE",  i
 
 parseCode("John000Doe000123");
 parseCode("michael0smith004331");
-parseCode("Thomas00LEE0000043"); */
+parseCode("Thomas00LEE0000043");
 
 
 function parseCode(str) {
@@ -117,4 +118,4 @@ function getOnlyEvens(arr) {
 
 getOnlyEvens([1, 3, 2, 6, 4, 8]);
 getOnlyEvens([0, 1, 2, 3, 4]);
-getOnlyEvens([1, 2, 3, 4, 5]); 
+getOnlyEvens([1, 2, 3, 4, 5]);
