@@ -43,23 +43,43 @@ img {
     display: block;
 }
   
-  input,
-  button,
-  textarea,
-  select {
+input,
+button,
+textarea,
+select {
     font: inherit;
+}
+
+a[class]{
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
-  a[class]{
-      text-decoration: none;
-  }
-
-  body{
-      min-height: 100vh;
-  }
-
-  .title {
-      display: flex;
-      justify-content: center;
-      margin-top: 50px;
-  }
+.btn__box {
+    display: flex;
+    justify-content: space-between;
+}
+    
+.btn {
+    border: 1px solid rgb(241, 154, 23);
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 50px;
+    cursor: pointer;
+}

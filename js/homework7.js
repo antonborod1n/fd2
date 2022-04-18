@@ -7,6 +7,27 @@ reorderNums ([1, 2, 3, 4], "asc") ➞ [1, 2, 3, 4]
 reorderNums ([1, 2, 3, 4], "desc") ➞ [1, 2, 3, 4] */
 
 
+function reorderNums(arr, str) {
+    arr.forEach(function (item) {
+        if (str === 'asc') {
+            arr.sort(function (a, b) {
+                return a - b;
+            });
+        } else {
+            arr.sort(function (a, b) {
+                return b - a;
+            });
+        }
+    });
+}
+
+console.log(reorderNums([515, 341, 98, 44, 211], "asc"));
+console.log(reorderNums([515, 341, 98, 44, 211], "desc"));
+console.log(reorderNums([63251, 78221], "asc"));
+console.log(reorderNums([63251, 78221], "desc"));
+console.log(reorderNums([1, 2, 3, 4], "asc"));
+console.log(reorderNums([1, 2, 3, 4], "desc")); 
+
 
 /* 2.	Напишите функцию, которая принимает закодированную строку и возвращает объект в соответствии со следующим примером:
 parseCode("John000Doe000123") ➞ {  firstName: "John",  lastName: "Doe",  id: "123"}
@@ -14,9 +35,26 @@ parseCode("michael0smith004331") ➞ {  firstName: "michael",  lastName: "smith"
 parseCode("Thomas00LEE0000043") ➞ {  firstName: "Thomas",  lastName: "LEE",  id: "43"} */
 
 
+function parseCode(str) {
+    var arr = str.split('0');
+    var obj = {
+        firstName: '',  
+        lastName: '',  
+        id: ''
+    };
+    arr = arr.filter(Boolean);
+    arr.forEach(item => {
+        obj[item] = item;
+    });
+    console.log(obj);
+}
+
+parseCode("John000Doe000123");
+parseCode("michael0smith004331");
+parseCode("Thomas00LEE0000043");
 
 
-/* 3. Создайте функцию, которая принимает массив в качестве аргумента и 	возвращает истину или ложь в зависимости от того, является ли среднее 	всех элементов в массиве целым числом или нет.
+/* 3. Создайте функцию, которая принимает массив в качестве аргумента и возвращает истину или ложь в зависимости от того, является ли среднее всех элементов в массиве целым числом или нет.
 isAvgWhole([1, 3]) ➞ true
 isAvgWhole([1, 2, 3, 4]) ➞ false
 isAvgWhole([1, 5, 6]) ➞ true
@@ -24,9 +62,40 @@ isAvgWhole([1, 1, 1]) ➞ true
 isAvgWhole([9, 2, 2, 5]) ➞ false */
 
 
+function isAvgWhole(arr) {
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    if (sum % arr.length === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
-/* 4. Дан массив чисел, верните массив, содержащий все четные числа в 		исходном массиве, который также имеет четные индексы.
+console.log(isAvgWhole([1, 3]));
+console.log(isAvgWhole([1, 2, 3, 4]));
+console.log(isAvgWhole([1, 5, 6]));
+console.log(isAvgWhole([1, 1, 1]));
+console.log(isAvgWhole([9, 2, 2, 5]));
+
+
+/* 4. Дан массив чисел, верните массив, содержащий все четные числа в исходном массиве, который также имеет четные индексы.
 getOnlyEvens([1, 3, 2, 6, 4, 8]) ➞ [2, 4]
 getOnlyEvens([0, 1, 2, 3, 4]) ➞ [0, 2, 4]
 getOnlyEvens([1, 2, 3, 4, 5]) ➞ []
  */
+
+ function getOnlyEvens(arr) {
+    var result = arr.filter(function (item, index) {
+        if (item % 2 === 0 && index % 2 === 0) {
+            return true;
+        }
+    });
+    console.log(result);
+}
+
+getOnlyEvens([1, 3, 2, 6, 4, 8]);
+getOnlyEvens([0, 1, 2, 3, 4]);
+getOnlyEvens([1, 2, 3, 4, 5]);
