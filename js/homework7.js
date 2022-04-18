@@ -26,7 +26,7 @@ console.log(reorderNums([515, 341, 98, 44, 211], "desc"));
 console.log(reorderNums([63251, 78221], "asc"));
 console.log(reorderNums([63251, 78221], "desc"));
 console.log(reorderNums([1, 2, 3, 4], "asc"));
-console.log(reorderNums([1, 2, 3, 4], "desc")); 
+console.log(reorderNums([1, 2, 3, 4], "desc"));
 
 
 /* 2.	Напишите функцию, которая принимает закодированную строку и возвращает объект в соответствии со следующим примером:
@@ -35,23 +35,42 @@ parseCode("michael0smith004331") ➞ {  firstName: "michael",  lastName: "smith"
 parseCode("Thomas00LEE0000043") ➞ {  firstName: "Thomas",  lastName: "LEE",  id: "43"} */
 
 
-function parseCode(str) {
+/* function parseCode(str) {
     var arr = str.split('0');
-    var obj = {
-        firstName: '',  
-        lastName: '',  
-        id: ''
-    };
+    var obj = {};
     arr = arr.filter(Boolean);
     arr.forEach(item => {
-        obj[item] = item;
+        obj.firstName = arr[0];
+        obj.lastName = arr[1];
+        obj.id = arr[2];
     });
     console.log(obj);
 }
 
 parseCode("John000Doe000123");
 parseCode("michael0smith004331");
-parseCode("Thomas00LEE0000043");
+parseCode("Thomas00LEE0000043"); */
+
+
+function parseCode(str) {
+    let NewArr2Values = [];
+    let arr = str.split("0");
+    let obj = {};
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i].length > 1) {
+            NewArr2Values.push(arr[i]);
+        };
+    };
+    obj.firstName = NewArr2Values[0];
+    obj.lastName = NewArr2Values[1];
+    obj.id = NewArr2Values[2];
+    return obj;
+
+}
+
+console.log(parseCode("John000Doe000123"));
+console.log(parseCode("michael0smith004331"));
+console.log(parseCode("Thomas00LEE0000043"));
 
 
 /* 3. Создайте функцию, которая принимает массив в качестве аргумента и возвращает истину или ложь в зависимости от того, является ли среднее всех элементов в массиве целым числом или нет.
@@ -87,7 +106,7 @@ getOnlyEvens([0, 1, 2, 3, 4]) ➞ [0, 2, 4]
 getOnlyEvens([1, 2, 3, 4, 5]) ➞ []
  */
 
- function getOnlyEvens(arr) {
+function getOnlyEvens(arr) {
     var result = arr.filter(function (item, index) {
         if (item % 2 === 0 && index % 2 === 0) {
             return true;
@@ -98,4 +117,4 @@ getOnlyEvens([1, 2, 3, 4, 5]) ➞ []
 
 getOnlyEvens([1, 3, 2, 6, 4, 8]);
 getOnlyEvens([0, 1, 2, 3, 4]);
-getOnlyEvens([1, 2, 3, 4, 5]);
+getOnlyEvens([1, 2, 3, 4, 5]); 
