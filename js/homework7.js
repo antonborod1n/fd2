@@ -11,13 +11,14 @@ function reorderNums(arr, str) {
     var obj = {
         asc: (a, b) => a - b,
         desc: (a, b) => b - a
-    }
+    };
     if(!obj[str]) {
         return arr;
     }
     return arr.reduce((sum, item) => {
         var a = Array.from(String(item), Number);
-        var v = reorderNums = a.sort(obj[str]).join('');
+        var v = a.sort(obj[str]).join('');
+        sum.push(Number(v));
         return sum;
     }, []);
 }
