@@ -8,26 +8,27 @@ reorderNums ([1, 2, 3, 4], "desc") ➞ [1, 2, 3, 4] */
 
 
 function reorderNums(arr, str) {
-    arr.forEach(function (item) {
-        if (str === 'asc') {
-            arr.sort(function (a, b) {
-                return a - b;
-            });
-        } else {
-            arr.sort(function (a, b) {
-                return b - a;
-            });
-        }
-    });
-    console.log(arr);
+    var obj = {
+        asc: (a, b) => a - b,
+        desc: (a, b) => b - a
+    };
+    if(!obj[str]) {
+        return arr;
+    }
+    return arr.reduce((sum, item) => {
+        var a = Array.from(String(item), Number);
+        var v = a.sort(obj[str]).join('');
+        sum.push(Number(v));
+        return sum;
+    }, []);
 }
 
-reorderNums([515, 341, 98, 44, 211], "asc");
-reorderNums([515, 341, 98, 44, 211], "desc");
-reorderNums([63251, 78221], "asc");
-reorderNums([63251, 78221], "desc");
-reorderNums([1, 2, 3, 4], "asc");
-reorderNums([1, 2, 3, 4], "desc");
+console.log(reorderNums([515, 341, 98, 44, 211], "asc"));
+console.log(reorderNums([515, 341, 98, 44, 211], "desc"));
+console.log(reorderNums([63251, 78221], "asc"));
+console.log(reorderNums([63251, 78221], "desc"));
+console.log(reorderNums([1, 2, 3, 4], "asc"));
+console.log(reorderNums([1, 2, 3, 4], "desc"));
 
 
 /* 2.	Напишите функцию, которая принимает закодированную строку и возвращает объект в соответствии со следующим примером:
