@@ -8,21 +8,18 @@ numbSort([777, 182, 11, 881, 27]) ➞ [11, 27, 777, 182, 881]
 numbSort([5, 4, 3, 2, 1, 18, 6, 1, 3]) ➞ [5, 4, 3, 2, 1, 6, 1, 3, 18]
  */
 
-/*function numbSort(arr) {
-    arr.sort(function (a, b) {
-        if (a.length > b.length) {
-            return 1;
-        }
-        if (a.length < b.length) {
-            return -1;
-        }
+function numbSort(arr) {
+    var x = arr.sort((a, b) => {
+        var c = String(a);
+        var d = String(b);
+        return c.length - d.length;
     });
-    return arr; 
+    return x;
 }
 
- console.log(numbSort([2, 37, 1, 2, 739, 2]));
+console.log(numbSort([2, 37, 1, 2, 739, 2]));
 console.log(numbSort([777, 182, 11, 881, 27]));
-console.log(numbSort([5, 4, 3, 2, 1, 18, 6, 1, 3])); */
+console.log(numbSort([5, 4, 3, 2, 1, 18, 6, 1, 3]));
 
 
 /* 2. Напишите функцию, которая сортирует слова по заданной строке.
@@ -34,26 +31,21 @@ sortStr(["middle", "junior", "senior"], "stnmj")➞ ["senior", " middle", " juni
 sortStr(["bike", "car", "motorcycle"], "camrb")➞ ["car", "motorcycle", "bike"]
  */
 
-/* function sortStr(arr) {
-    var a = 'cmop';
-    var b = 'stnmj';
-    var c = 'camrb';
+function sortStr(arr) {
 
-    arr.filter(function(item){
-       return arr;
-
+    arr.filter(function (item) {
+        return arr;
     });
 }
 
 sortStr(["orange ", "mandarin", " pear", "coconut "], "cmop");
 sortStr(["middle", "junior", "senior"], "stnmj");
-sortStr(["bike", "car", "motorcycle"], "camrb"); */
+sortStr(["bike", "car", "motorcycle"], "camrb");
 
 
 /* 
 3. Есть строка, переверните все слова нечетной длины. Слова четной длины не изменяются.
 revOddWord("Egg") ➞ "ggE"revOddWord ("It is false") ➞ "It is eslaf"revOddWord ("Dear Santa, give me a new iPhone”)➞ "Dear atnaS, give me a wen iPhone. " */
-
 
 
 function revOddWord(str) {
