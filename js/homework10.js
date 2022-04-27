@@ -9,12 +9,12 @@ numbSort([5, 4, 3, 2, 1, 18, 6, 1, 3]) ➞ [5, 4, 3, 2, 1, 6, 1, 3, 18]
  */
 
 function numbSort(arr) {
-    var x = arr.sort((a, b) => {
+    var result = arr.sort((a, b) => {
         var c = String(a);
         var d = String(b);
         return c.length - d.length;
     });
-    return x;
+    return result;
 }
 
 console.log(numbSort([2, 37, 1, 2, 739, 2]));
@@ -31,16 +31,16 @@ sortStr(["middle", "junior", "senior"], "stnmj")➞ ["senior", " middle", " juni
 sortStr(["bike", "car", "motorcycle"], "camrb")➞ ["car", "motorcycle", "bike"]
  */
 
-function sortStr(arr) {
+function sortStr(arr, str) {
+    var arrNew = [];
+    var strNew = str.split('');
 
-    arr.filter(function (item) {
-        return arr;
-    });
+    strNew.forEach(item => arr.forEach(elem => item == elem[0] ? arrNew.push(elem) : 1));
+    return arrNew;
 }
-
-sortStr(["orange ", "mandarin", " pear", "coconut "], "cmop");
-sortStr(["middle", "junior", "senior"], "stnmj");
-sortStr(["bike", "car", "motorcycle"], "camrb");
+console.log(sortStr(["orange ", "mandarin", "pear", "coconut "], "cmop"));
+console.log(sortStr(["middle", "junior", "senior"], "stnmj"));
+console.log(sortStr(["bike", "car", "motorcycle"], "camrb"));
 
 
 /* 
