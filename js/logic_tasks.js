@@ -20,15 +20,15 @@ afterNYears({  "Joel" : 32,  "Fred" : 44,  "Reginald" : 65,  "Susan" : 33,  "Jul
 afterNYears({  "Baby" : 2,  "Child" : 8,  "Teenager" : 15,  "Adult" : 25,  "Elderly" : 71}, 19) ➞ {  "Baby" : 21,  "Child" : 27,  "Teenager" : 34,  "Adult" : 44,  "Elderly" : 90}
 afterNYears({  "Genie" : 1000,  "Joe" : 40}, 5) ➞ {  "Genie" : 1005,  "Joe" : 45} */
 
-/* function afterNYears(obj, num) {
-    for (let key in obj) {
-        return obj[key] + num;
-    }
+function afterNYears(obj, num) {
+    var a = obj.reduce((sum, item) => {
+        return obj.item;
+    });
 }
 
 console.log(afterNYears({ "Joel": 32, "Fred": 44, "Reginald": 65, "Susan": 33, "Julian": 13 }, 1));
 console.log(afterNYears({ "Baby": 2, "Child": 8, "Teenager": 15, "Adult": 25, "Elderly": 71 }, 19));
-console.log(afterNYears({ "Genie": 1000, "Joe": 40 }, 5)); */
+console.log(afterNYears({ "Genie": 1000, "Joe": 40 }, 5));
 
 
 /* 3. Создайте функцию, которая возвращает true, если меньшие массивы могут объединяться для формирования целевого массива, и false в противном случае.
