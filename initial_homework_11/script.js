@@ -47,9 +47,11 @@ function addNewCat() {
 function theme() {
     var img = document.getElementsByTagName('img')[0];
     var chageTextColor = document.getElementsByTagName('body');
+    var a = document.querySelector('.card-content');
 
     img.src="./images/moon.svg";
     chageTextColor[0].style.backgroundColor = '#1d1d1d';
+    a.style.color = '#1d1d1d';
 
     for(var i = 0; i < chageTextColor.length; i++) {
         chageTextColor[i].style.color = '#FFFFFF';
