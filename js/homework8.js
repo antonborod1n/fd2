@@ -6,26 +6,24 @@ function HashStorageFunc() {
     };
     this.getValue = function (key) {
         if (key in obj) {
-            alert('Напиток: ' + key + ' ' + 'алкогольный: ' + obj[key]);
+            console.log('Напиток: ' + key + ' ' + 'алкогольный: ' + obj[key]);
         }
         else {
-            alert('Такого коктейля в списке нет');
+            console.log('Такого коктейля в списке нет');
         }
     };
     this.deleteValue = function (key) {
         if (key in obj) {
             delete obj[key];
-            alert('Удален');
-            console.log('true');
+            console.log('Удален');
         }
         else {
-            alert('Такого коктейля в списке нет');
-            console.log('false');
+            console.log('Такого коктейля в списке нет');
         } 
     };
     this.getKeys = function (key) {
         for (key in obj) {
-            alert(key);
+            console.log(key);
         }
     };
     console.log(obj);

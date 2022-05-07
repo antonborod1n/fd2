@@ -10,9 +10,9 @@ numbSort([5, 4, 3, 2, 1, 18, 6, 1, 3]) ➞ [5, 4, 3, 2, 1, 6, 1, 3, 18]
 
 function numbSort(arr) {
     var result = arr.sort((a, b) => {
-        var c = String(a);
-        var d = String(b);
-        return c.length - d.length;
+        var resultA = String(a);
+        var resultB = String(b);
+        return resultA.length - resultB.length;
     });
     return result;
 }
@@ -42,7 +42,6 @@ console.log(sortStr(["orange ", "mandarin", "pear", "coconut "], "cmop"));
 console.log(sortStr(["middle", "junior", "senior"], "stnmj"));
 console.log(sortStr(["bike", "car", "motorcycle"], "camrb"));
 
-
 /* 
 3. Есть строка, переверните все слова нечетной длины. Слова четной длины не изменяются.
 revOddWord("Egg") ➞ "ggE"revOddWord ("It is false") ➞ "It is eslaf"revOddWord ("Dear Santa, give me a new iPhone”)➞ "Dear atnaS, give me a wen iPhone. " */
@@ -50,19 +49,16 @@ revOddWord("Egg") ➞ "ggE"revOddWord ("It is false") ➞ "It is eslaf"revOddWor
 
 function revOddWord(str) {
     var arr = str.split(' ');
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i].length % 2 === 1) {
-            arr[i] = arr[i].split('').reverse().join('');
+    var result = arr.map(item => {
+        if (item.length % 2 == 0) {
+            return item;
+        } else {
+            return item.split('').reverse().join('');
         }
-    }
-    var res = arr.join(' ');
-    return res;
+    });
+    return result.join(' ');
 }
 
 console.log(revOddWord("Egg"));
 console.log(revOddWord("It is false"));
-console.log(revOddWord('Dear Santa, give me a new iPhone'));
-
-
-
-
+console.log(revOddWord("Dear Santa , give me a new iPhone"));
