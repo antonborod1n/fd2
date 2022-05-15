@@ -6,27 +6,26 @@ function HashStorageFunc() {
     };
     this.getValue = function (key) {
         if (key in obj) {
-            console.log('Напиток: ' + key + ' ' + 'алкогольный: ' + obj[key]);
+            return 'Напиток: ' + key + ' ' + 'алкогольный: ' + obj[key];
         }
         else {
-            console.log('Такого коктейля в списке нет');
+            return 'Такого коктейля в списке нет';
         }
     };
     this.deleteValue = function (key) {
         if (key in obj) {
             delete obj[key];
-            console.log('Удален');
+            return 'Удален';
         }
         else {
-            console.log('Такого коктейля в списке нет');
+            return 'Такого коктейля в списке нет';
         } 
     };
     this.getKeys = function (key) {
         for (key in obj) {
-            console.log(key);
+            return key;
         }
     };
-    console.log(obj);
 }
 
 var drinkStorage = new HashStorageFunc();
@@ -36,7 +35,7 @@ function add() {
     var isAlc = prompt('Он алкогольный?');
     var structure = prompt('Способ приготовления');
     var result = isAlc + ' рецепт приготовления: ' + structure;
-    drinkStorage.addValue(name, result );
+    drinkStorage.addValue(name, result);
 }
 
 function get() {
@@ -48,4 +47,3 @@ function del() {
     var key = prompt('Введите название напитка');
     drinkStorage.deleteValue(key);
 }
-

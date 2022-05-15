@@ -18,10 +18,99 @@
             <button class="btn" onclick="del()">удаление информации о напитке</button>
             <button class="btn" onclick="drinkStorage.getKeys()">перечень всех напитков</button>
         </div>
-        <h2 class="title">Домашняя работа 10</h2>
-    </div> 
-    <script src="./js/homework8.js"></script>
-    <script src="./js/homework10.js"></script>
+    </div>
+    <section class="valid-form">
+        <div class="container">
+            <h2 class="title">Домашняя работа 13(VALID_FORM)</h2>
+            <p class="valid-form__text">
+                Для внесения вашего сайта в каталог, заполните форму:
+            </p>
+            <form action="https://fe.it-academy.by/TestForm.php" target="_blank" class="form" method="get" name="formMain">
+                <div class="form__lab form__site-devs">
+                    <label class="form__label" for="form__input-devs">Разработчики:</label>
+                    <input class="form__input" id="form__input-devs" type="text" name="devs" placeholder="Ф.И.О">
+                </div>
+                <div class="form__lab form__site-name">
+                    <label class="form__label" for="form__input-sinename">Название сайта:</label>
+                    <input class="form__input" id="form__input-sinename" type="text" name="siteName" placeholder="it-academy">
+                </div>
+                <div class="form__lab form__site-url">
+                    <label class="form__label" for="form__input-url">URL сайта:</label>
+                    <input class="form__input" id="form__input-url"type="url" name="siteUrl" placeholder="https://exemple.com">
+                </div>
+                <div class="form__lab form__site-data">
+                    <label class="form__label" for="form__input-data">Дата запуска сайта:</label>
+                    <input class="form__input" id="form__input-data" type="date" name="siteDate">
+                </div>
+                <div class="form__lab form__site-num">
+                    <label class="form__label" for="form__input-numb">Посетителей в сутки:</label>
+                    <input class="form__input" id="form__input-numb" type="number" name="userNum" placeholder="Количество цифрами">
+                </div>
+                <div class="form__lab form__site-email">
+                    <label class="form__label" for="form__input-email">Email для связи:</label>
+                    <input class="form__input" id="form__input-email" type="email" name="email" placeholder="exemple@gmail.com">
+                </div>
+
+                <div class="form__lab">
+                    <label class="form__label">Рубрика каталога:</label>
+                        <select name="selection">
+                            <option value="1">Выбор</option>
+                            <option value="1">Программирование</option>
+                            <option value="2">Продвижение</option>
+                            <option value="3">Дизайн</option>
+                        </select>
+                </div>
+
+                <div class="form__lab">
+                    <label class="form__label" for="radio-btn">Размещение:</label>
+                    <input type="radio" name="rad" value="nopay">Бесплатное
+                    <input type="radio" name="rad" value="pay">Платное
+                    <input type="radio" name="rad" value="vip">VIP
+                </div>
+
+                <div class="form__lab comment">
+                    <label class="form__label" for="input-checkbox">Разрешить отзывы:</label>
+                    <input type="checkbox" id="input-checkbox" name="commentary">
+                </div>
+
+                <div class="form__lab full-width">
+                    <label class="form__label" for="textarea">Описание сайта:</label>
+                    <div>
+                        <textarea class="form__textarea" id="textarea" name="mytext"></textarea>
+                    </div>
+                </div>
+
+                <div class="form__lab">
+                    <input class="form__btn" type="submit" value="Опубликовать">
+                </div>
+
+            </form> 
+            <!-- <form action="https://fe.it-academy.by/TestForm.php" target="_blank" class="form" method="get" name="formMain">
+
+                <div class="form__lab">
+                    <label class="form__label" for="radio-btn">Размещение:</label>
+                    <input type="radio" name="rad" value="nopay">Бесплатное
+                    <input type="radio" name="rad" value="pay">Платное
+                    <input type="radio" name="rad" value="vip">VIP
+                </div>
+                <div class="form__lab">
+                    <input class="form__btn" type="submit" value="Опубликовать">
+                </div>
+
+            </form> -->
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- <script src="./js/homework8.js"></script> -->
+    <script src="./js/homework13.js"></script>
 </body>
 
 </html>
