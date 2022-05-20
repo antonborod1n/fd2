@@ -38,7 +38,7 @@ form.onsubmit = function () {
         }
     }
     //Проверка сheckbox
-    if (inputCheckbox.checked == false) {
+    if (inputCheckbox.checked === false) {
         inputCheckbox.classList.add('error');
         inputCheckbox.focus();
         return false;
