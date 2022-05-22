@@ -11,6 +11,17 @@
 <body>
     <div class="container">
         <h1 class="title">Бородин Антон</h1>
+        <div class="rendom">
+            <h2 class="random__title">Случайные числа</h2>
+            <ul class="random__list">
+                <li class="random__item">от 1 до 10</li>
+                <li class="random__item">от 11 до 20</li>
+                <li class="random__item">от 21 до 30</li>
+                <li class="random__item">от 31 до 40</li>
+                <li class="random__item">от 41 до 50</li>
+            </ul>
+            <button class="btn__sub" id="btn__sub">Сгенерировать</button>
+        </div>
         <h2 class="title">Домашняя работа 8</h2>
         <div class="btn__box">
             <button class="btn" onclick="add()">ввод информации о напитке</button>
@@ -25,18 +36,21 @@
             <p class="valid-form__text">
                 Для внесения вашего сайта в каталог, заполните форму:
             </p>
-            <form action="https://fe.it-academy.by/TestForm.php" target="_blank" class="form" method="get" name="formMain">
+            <form action="https://fe.it-academy.by/TestForm.php" target="_blank" class="form" method="get"
+                name="formMain">
                 <div class="form__lab form__site-devs">
                     <label class="form__label" for="form__input-devs">Разработчики:</label>
                     <input class="form__input" id="form__input-devs" type="text" name="devs" placeholder="Ф.И.О">
                 </div>
                 <div class="form__lab form__site-name">
                     <label class="form__label" for="form__input-sinename">Название сайта:</label>
-                    <input class="form__input" id="form__input-sinename" type="text" name="siteName" placeholder="it-academy">
+                    <input class="form__input" id="form__input-sinename" type="text" name="siteName"
+                        placeholder="it-academy">
                 </div>
                 <div class="form__lab form__site-url">
                     <label class="form__label" for="form__input-url">URL сайта:</label>
-                    <input class="form__input" id="form__input-url"type="url" name="siteUrl" placeholder="https://exemple.com">
+                    <input class="form__input" id="form__input-url" type="url" name="siteUrl"
+                        placeholder="https://exemple.com">
                 </div>
                 <div class="form__lab form__site-data">
                     <label class="form__label" for="form__input-data">Дата запуска сайта:</label>
@@ -44,21 +58,23 @@
                 </div>
                 <div class="form__lab form__site-num">
                     <label class="form__label" for="form__input-numb">Посетителей в сутки:</label>
-                    <input class="form__input" id="form__input-numb" type="number" name="userNum" placeholder="Количество цифрами">
+                    <input class="form__input" id="form__input-numb" type="number" name="userNum"
+                        placeholder="Количество цифрами">
                 </div>
                 <div class="form__lab form__site-email">
                     <label class="form__label" for="form__input-email">Email для связи:</label>
-                    <input class="form__input" id="form__input-email" type="email" name="email" placeholder="exemple@gmail.com">
+                    <input class="form__input" id="form__input-email" type="email" name="email"
+                        placeholder="exemple@gmail.com">
                 </div>
 
                 <div class="form__lab">
                     <label class="form__label">Рубрика каталога:</label>
-                        <select name="selection">
-                            <option value="1">Выбор</option>
-                            <option value="1">Программирование</option>
-                            <option value="2">Продвижение</option>
-                            <option value="3">Дизайн</option>
-                        </select>
+                    <select name="selection">
+                        <option value="1">Выбор</option>
+                        <option value="1">Программирование</option>
+                        <option value="2">Продвижение</option>
+                        <option value="3">Дизайн</option>
+                    </select>
                 </div>
 
                 <div class="form__lab">
@@ -97,6 +113,7 @@
 
 
     <script src="./js/homework8.js"></script>
+    <script src="./js/random.js"></script>
     <!-- <script src="./js/homework13.js"></script> -->
 </body>
 

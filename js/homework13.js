@@ -54,3 +54,4 @@ form.onsubmit = function () {
         textarea.classList.remove('error');
     }
 };
+

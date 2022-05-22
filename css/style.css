@@ -109,8 +109,8 @@ body{
     display: inline-block;
     margin-bottom: 5px;
 }
+
 .form__input {
-    
     border-radius: 5px;
     border: none;
     width: 100%;
@@ -175,4 +175,28 @@ body{
     .container .form__lab > div label {
         display: block;
     }
+}
+
+.rendom {
+    background-color: rgb(205, 192, 253);
+    border-radius: 20px;
+    padding: 40px;
+}
+.random__title {
+    margin-bottom: 10px;
+}
+.random__item {
+    margin-bottom: 10px;
+}
+.random__item span {
+    color: green;
+}
+.btn__sub {
+    border: none;
+    background-color: rgb(61, 245, 122);
+    color: rgb(48, 48, 48);
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
 }
