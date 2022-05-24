@@ -11,9 +11,9 @@ getSum.addEventListener('click', function () {
     var d = randomValue(31, 40);
     var e = randomValue(41, 50);
 
-    randomItem[0].insertAdjacentHTML('beforeend', `<span> - ${a}</span>`);
-    randomItem[1].insertAdjacentHTML('beforeend', `<span> - ${b}</span>`);
-    randomItem[2].insertAdjacentHTML('beforeend', `<span> - ${c}</span>`);
-    randomItem[3].insertAdjacentHTML('beforeend', `<span> - ${d}</span>`);
-    randomItem[4].insertAdjacentHTML('beforeend', `<span> - ${e}</span>`);
+    randomItem[0].innerHTML = `- ${a}`;
+    randomItem[1].innerHTML = `- ${b}`;
+    randomItem[2].innerHTML = `- ${c}`;
+    randomItem[3].innerHTML = `- ${d}`;
+    randomItem[4].innerHTML = `- ${e}`;
 }); 

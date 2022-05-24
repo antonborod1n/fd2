@@ -185,10 +185,10 @@ body{
 .random__title {
     margin-bottom: 10px;
 }
-.random__item {
+.random__list li {
     margin-bottom: 10px;
 }
-.random__item span {
+.random__item {
     color: green;
 }
 .btn__sub {
