@@ -2,16 +2,12 @@
 var taskOne = document.querySelector('.task-one');
 var inputItem = taskOne.querySelectorAll('input');
 
-inputItem[0].addEventListener('click', function () {
-    alert(inputItem[0].value);
-});
-
-inputItem[1].addEventListener('click', function () {
-    alert(inputItem[1].value);
-});
-
-inputItem[2].addEventListener('click', function () {
-    alert(inputItem[2].value);
+inputItem.forEach(element => {
+    element.addEventListener('click', setInputValue);
+    function setInputValue() {
+        alert(element.value);
+        element.removeEventListener('click', setInputValue);
+    }
 });
 
 //2
@@ -26,7 +22,6 @@ inputItems[0].addEventListener('blur', function (e) {
 inputItems[1].addEventListener('blur', function (e) {
     e.target.insertAdjacentHTML('afterend', `<p>Вы ввели ${e.target.value}<p>`);
 });
-
 
 //3
 
@@ -52,9 +47,9 @@ var select = four.querySelector('select');
 var optionAll = document.querySelectorAll('option');
 var textBox = four.querySelector('input');
 
-select.addEventListener('click', function() {
+select.addEventListener('click', function () {
     optionAll.forEach(function (item) {
-        if(item.selected === true) {
+        if (item.selected === true) {
             textBox.value = item.textContent;
         }
     });
